@@ -1,320 +1,406 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>SAUPER · Propuesta de nueva web</title>
+<meta name="theme-color" content="#08261A">
+<title>SAUPER · Jardinería en Alicante (maqueta)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0}
-a{color:#12603C}a:hover{color:#0B4129}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css?v=2">
 </head>
 <body>
-<div style="background:#17261D;color:#FFFFFF;font-family:'Manrope',system-ui,sans-serif;font-size:14px;padding:10px 24px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:center;text-align:center"><span><strong>Propuesta de diseño para SAUPER</strong> · maqueta, no es la web oficial</span><span style="display:flex;gap:16px"><a href="index.html" style="color:#BFE3CB">Portada</a><a href="servicio-poda.html" style="color:#BFE3CB">Página de servicio</a><a href="movil.html" style="color:#BFE3CB">Vista móvil</a></span></div>
-<div style="width: 100%; background: #F7F8F3; color: #17261D; font-family: 'Manrope', system-ui, sans-serif; font-size: 17px; line-height: 1.55">
-<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8E0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="#inicio" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #0E3B27">
-<span style="width:48px;height:48px;overflow:hidden;position:relative;display:inline-block;flex:none"><img src="https://sauper.es/wp-content/themes/default/assets/img/logo.png" alt="Logotipo de SAUPER" style="position:absolute;width:82.8px;left:-18.0px;top:-11.9px;max-width:none"></span>
-<span style="display: flex; flex-direction: column; line-height: 1.05">
-<span style="font-weight: 800; font-size: 22px; letter-spacing: 0.04em">SAUPER</span>
-<span style="font-size: 13px; color: #4A5D51">jardinería y limpieza</span>
-</span>
-</a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 26px; font-weight: 600; font-size: 15px">
-<a href="#servicios" style="text-decoration: none; color: #17261D">Jardinería</a>
-<a href="#limpieza" style="text-decoration: none; color: #17261D">Limpieza</a>
-<a href="#trabajos" style="text-decoration: none; color: #17261D">Trabajos</a>
-<a href="#nosotros" style="text-decoration: none; color: #17261D">Nosotros</a>
-<a href="#preguntas" style="text-decoration: none; color: #17261D">Preguntas</a>
-<a href="#contacto" style="text-decoration: none; color: #17261D">Contacto</a>
-</nav>
-<a href="tel:+34663614939" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #12603C; color: #12603C; font-weight: 700; font-size: 15px; text-decoration: none">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
-663 61 49 39
-</a>
-</div>
+
+<div class="aviso"><span>Maqueta de la nueva web de SAUPER. No es la web oficial.</span><a href="propuesta.html">Volver a la propuesta</a></div>
+
+<div style="position:relative">
+<header class="top">
+  <div class="top-in">
+    <a class="marca" href="#inicio"><span class="chip"><img src="https://sauper.es/wp-content/themes/default/assets/img/logo.png" alt=""></span>SAUPER</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-lima" href="https://wa.me/34663614939?text=Hola%20SAUPER%2C%20quiero%20pedir%20un%20presupuesto">Pedir presupuesto</a>
+    </nav>
+    <button class="menu-btn" id="abrir" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+  </div>
 </header>
-<section id="inicio" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
-<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
-<p style="margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #12603C">Alicante · San Juan · El Campello y alrededores</p>
-<h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 60px; line-height: 1.05; color: #0E3B27">Tu jardín cuidado todo el año. Tú solo disfrútalo.</h1>
-<p style="margin: 0; font-size: 19px; color: #3B4D42; max-width: 540px">Mantenimiento, poda, diseño de jardines y servicios de limpieza para viviendas, comunidades, urbanizaciones y negocios. Te damos presupuesto en menos de 24 horas.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px">
-<a href="https://wa.me/34663614939" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; background: #12603C; color: #FFFFFF; font-weight: 700; font-size: 17px; text-decoration: none">
-<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
-Pedir presupuesto por WhatsApp
-</a>
-<a href="tel:+34663614939" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 22px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #C9D6CC; color: #17261D; font-weight: 700; font-size: 17px; text-decoration: none">Llamar ahora</a>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px 26px; padding-top: 10px; font-size: 15px; color: #3B4D42; font-weight: 600">
-<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"></polygon></svg>[Nota] en Google · [Nº] reseñas</span>
-<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>Presupuesto en menos de 24 h</span>
-<span style="display: inline-flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mantenimiento todo el año</span>
-</div>
-</div>
-<div style="flex: 1 1 460px; min-width: 0">
-<img src="https://sauper.es/wp-content/uploads/2026/05/Perfekt-gemahter-Rasen-%E2%80%93-Tipps-fur-ein-gleichmasiges-Schnittbild.jpg" alt="Jardinero cortando el césped de un jardín" style="width: 100%; height: 480px; object-fit: cover; border-radius: 28px; display: block">
-</div>
+
+<section class="hero" id="inicio">
+  <div class="slides" aria-hidden="true">
+    <picture class="slide on" data-cap="Poda de un pino en altura">
+      <source media="(min-width:860px)" srcset="https://lh3.googleusercontent.com/d/1-zvkSn7y5PjKFxu7a7wZxugRQsgOW3uW=w2000">
+      <img src="https://lh3.googleusercontent.com/d/1PpRTr_W2OTwnCsP2Wedob8y3T5fcmGGm=w1000" alt="" style="object-position:50% 30%" fetchpriority="high">
+    </picture>
+    <picture class="slide" data-cap="Palmeras saneadas">
+      <source media="(min-width:860px)" srcset="https://lh3.googleusercontent.com/d/1bxmM0pOHu6UfXmr_4YPDo_MKVftM4sbc=w2000">
+      <img src="https://lh3.googleusercontent.com/d/1gnubokvzKA3itPOHB0KQC1tsuuIj1DX8=w1000" alt="" style="object-position:50% 40%" loading="lazy">
+    </picture>
+    <picture class="slide" data-cap="Parterre nuevo con acolchado">
+      <source media="(min-width:860px)" srcset="https://lh3.googleusercontent.com/d/19Cbumewpi9nK1wee17gV9sNiddk2oPDl=w2000">
+      <img src="https://lh3.googleusercontent.com/d/19Cbumewpi9nK1wee17gV9sNiddk2oPDl=w1400" alt="" style="object-position:62% 50%" loading="lazy">
+    </picture>
+  </div>
+  <div class="hero-in">
+    <p class="zona entra">Alicante, San Juan y El Campello</p>
+    <h1 class="entra d1"><span>De la raíz</span><span>a la copa.</span></h1>
+    <p class="sub entra d2">Poda en altura, palmeras, setos, jardines nuevos y limpieza. Cuidamos tu jardín todo el año para que tú solo lo disfrutes.</p>
+    <div class="botones entra d3">
+      <a class="btn btn-lima" href="https://wa.me/34663614939?text=Hola%20SAUPER%2C%20quiero%20pedir%20un%20presupuesto">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        Presupuesto por WhatsApp
+      </a>
+      <a class="btn btn-claro" href="tel:+34663614939">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        Llamar al 663 61 49 39
+      </a>
+    </div>
+    <div class="pie-foto entra d4">
+      <span class="cap" id="cap">Trabajo real: poda de un pino en altura</span>
+      <span class="puntos" id="puntos"><button class="on" aria-label="Foto 1"></button><button aria-label="Foto 2"></button><button aria-label="Foto 3"></button></span>
+    </div>
+  </div>
 </section>
-<section id="servicios" style="background: #FFFFFF; padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 680px">
-<p style="margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #12603C">Jardinería</p>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Todo lo que necesita tu jardín</h2>
-<p style="margin: 0; color: #3B4D42">Césped, plantas, árboles, setos y exteriores, con técnicas y productos adaptados a cada espacio. Visitas periódicas o trabajos puntuales.</p>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 20px">
-<article style="flex: 1 1 250px; min-width: 0; background: #F7F8F3; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column">
-<img src="https://sauper.es/wp-content/uploads/2026/05/Perfekt-gemahter-Rasen-%E2%80%93-Tipps-fur-ein-gleichmasiges-Schnittbild.jpg" alt="Césped recién cortado" style="width: 100%; height: 180px; object-fit: cover; display: block">
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Mantenimiento de jardines</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px; flex-grow: 1">Cuidado regular de césped, plantas, árboles y exteriores durante todo el año.</p>
-<a href="#" style="font-weight: 700; font-size: 15px; text-decoration: none">Ver servicio →</a>
+
+<div class="hoja-menu" id="menu" role="dialog" aria-label="Menú">
+  <button class="cerrar" id="cerrar" aria-label="Cerrar menú">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#videos">Vídeos</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="acciones">
+    <a class="btn btn-lima" href="https://wa.me/34663614939?text=Hola%20SAUPER%2C%20quiero%20pedir%20un%20presupuesto">Presupuesto por WhatsApp</a>
+    <a class="btn btn-claro" href="tel:+34663614939">Llamar al 663 61 49 39</a>
+  </div>
 </div>
-</article>
-<article style="flex: 1 1 250px; min-width: 0; background: #F7F8F3; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column">
-<img src="https://sauper.es/wp-content/uploads/2026/05/3613.jpg" alt="Jardinero recortando un seto" style="width: 100%; height: 180px; object-fit: cover; object-position: 60% 30%; display: block">
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Poda y limpieza de jardines</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px; flex-grow: 1">Poda de árboles, setos y arbustos. Limpieza y retirada de restos vegetales.</p>
-<a href="servicio-poda.html" style="font-weight: 700; font-size: 15px; text-decoration: none">Ver servicio →</a>
-</div>
-</article>
-<article style="flex: 1 1 250px; min-width: 0; background: #F7F8F3; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column">
-<div style="height: 180px; box-sizing: border-box; border-bottom: 2px dashed #9DB8A6; background: #EEF3EC; display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; color: #4A5D51; font-weight: 600; font-size: 15px">Foto o render de un jardín diseñado por vosotros</div>
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Diseño y mejora de jardines</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px; flex-grow: 1">Plantación, preparación del terreno y mejora de zonas verdes para que sean bonitas y funcionales.</p>
-<a href="#" style="font-weight: 700; font-size: 15px; text-decoration: none">Ver servicio →</a>
-</div>
-</article>
-<article style="flex: 1 1 250px; min-width: 0; background: #F7F8F3; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column">
-<img src="https://sauper.es/wp-content/uploads/2026/05/314.jpg" alt="Cuidado de un arbusto con tijeras de podar" style="width: 100%; height: 180px; object-fit: cover; display: block">
-<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Tratamientos y cuidado de plantas</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px; flex-grow: 1">Tratamientos fitosanitarios para proteger plantas y árboles de plagas y enfermedades.</p>
-<a href="#" style="font-weight: 700; font-size: 15px; text-decoration: none">Ver servicio →</a>
-</div>
-</article>
-</div>
-</div>
+
+<main>
+
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="real">Fotos y vídeos de trabajos reales</span>
+      <h2>Todo tu jardín, de arriba abajo.</h2>
+      <p>Desde la copa de una palmera hasta el riego que va bajo tierra. Un solo equipo para todo lo que necesita tu jardín.</p>
+    </div>
+
+    <div class="arbol" id="arbol">
+      <div class="tronco" aria-hidden="true"><div class="savia" id="savia"></div></div>
+
+      <article class="parada">
+        <div class="txt">
+          <p class="nivel">En la copa</p>
+          <h3>Poda en altura y palmeras</h3>
+          <p>Subimos con cuerda y arnés a pinos y palmeras. Podamos sin dañar el árbol y sin estropear lo que hay debajo.</p>
+          <p style="margin-top:12px"><a href="servicio-poda.html"><b>Ver poda de árboles</b></a></p>
+        </div>
+        <div class="foto"><img src="https://lh3.googleusercontent.com/d/1-zvkSn7y5PjKFxu7a7wZxugRQsgOW3uW=w1200" alt="Operario de SAUPER podando un pino con cuerda y arnés" loading="lazy" style="object-position:40% 50%"></div>
+      </article>
+
+      <article class="parada">
+        <div class="txt">
+          <p class="nivel">A media altura</p>
+          <h3>Setos y arbustos</h3>
+          <p>Recortamos setos de cualquier tamaño y dejamos la línea recta, la acera limpia y los restos fuera.</p>
+        </div>
+        <div class="foto"><img src="https://lh3.googleusercontent.com/d/1sULOC1p8UcO_4XSVGqf5RZMa29LtoYuB=w1200" alt="Seto recortado junto a un muro de piedra" loading="lazy" style="object-position:50% 45%"></div>
+      </article>
+
+      <article class="parada">
+        <div class="txt">
+          <p class="nivel">En el suelo</p>
+          <h3>Diseño, plantación y riego</h3>
+          <p>Parterres nuevos, plantas que aguantan el clima de Alicante y riego por goteo para gastar menos agua.</p>
+        </div>
+        <div class="foto"><img src="https://lh3.googleusercontent.com/d/19Cbumewpi9nK1wee17gV9sNiddk2oPDl=w1200" alt="Parterre nuevo con acolchado de corteza y plantas" loading="lazy" style="object-position:60% 50%"></div>
+      </article>
+
+      <article class="parada">
+        <div class="txt">
+          <p class="nivel">Hasta la raíz</p>
+          <h3>Trasplante de árboles grandes</h3>
+          <p>Movemos olivos y palmeras con camión grúa, con todo su cepellón. Dale al vídeo y míralo.</p>
+        </div>
+        <button class="vid" data-video="1yGn3sxBk4ebynKoRHIbUhzdwfp-PBjvx" data-t="Trasplante de un olivo con grúa">
+          <img src="https://lh3.googleusercontent.com/d/1yGn3sxBk4ebynKoRHIbUhzdwfp-PBjvx=w720" alt="" loading="lazy">
+          <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vid-txt">Trasplante de un olivo con grúa</span>
+        </button>
+      </article>
+    </div>
+
+    <div class="tambien">
+      <h3>Y además</h3>
+      <ul>
+        <li>Mantenimiento todo el año</li>
+        <li>Tratamientos y abonado</li>
+        <li>Césped</li>
+        <li>Limpieza de parcelas</li>
+        <li>Retirada de restos</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section id="limpieza" style="padding: 64px 0; background: #E8F0EA">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 48px">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #12603C">Servicios de limpieza</p>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 38px; line-height: 1.1; color: #0E3B27">También limpiamos dentro</h2>
-<p style="margin: 0; color: #3B4D42">El mismo equipo de confianza para tu comunidad, tu oficina o tu piso turístico.</p>
-<div><a href="#" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #12603C; color: #12603C; font-weight: 700; text-decoration: none">Ver servicios de limpieza</a></div>
-</div>
-<ul style="flex: 1 1 520px; min-width: 0; margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px">
-<li style="flex: 1 1 200px; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-weight: 700; color: #0E3B27">Comunidades de vecinos</li>
-<li style="flex: 1 1 200px; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-weight: 700; color: #0E3B27">Oficinas</li>
-<li style="flex: 1 1 200px; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-weight: 700; color: #0E3B27">Apartamentos turísticos</li>
-<li style="flex: 1 1 200px; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-weight: 700; color: #0E3B27">Limpieza de final de obra</li>
-<li style="flex: 1 1 200px; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-weight: 700; color: #0E3B27">Cristales</li>
-</ul>
-</div>
+
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="real">Vídeos de SAUPER</span>
+      <h2>Míralo en acción.</h2>
+      <p>Así trabajamos. Toca un vídeo para verlo.</p>
+    </div>
+    <div class="carril">
+      <button class="vid" data-video="12_hQCqYW_htecFievTRIcSCfrYT7XUym" data-t="Un jardín terminado">
+        <img src="https://lh3.googleusercontent.com/d/12_hQCqYW_htecFievTRIcSCfrYT7XUym=w720" alt="" loading="lazy">
+        <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vid-txt">Un jardín terminado</span>
+      </button>
+      <button class="vid" data-video="1DOMKXKGxfUcFRUDfXvkAEItT5uTnUzp4" data-t="Poda de una palmera en altura">
+        <img src="https://lh3.googleusercontent.com/d/1DOMKXKGxfUcFRUDfXvkAEItT5uTnUzp4=w720" alt="" loading="lazy">
+        <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vid-txt">Poda de una palmera en altura</span>
+      </button>
+      <button class="vid" data-video="1y0kW_JNF0__YJQrdi-4o0-WENYPYACz_" data-t="Recorte de un seto alto">
+        <img src="https://lh3.googleusercontent.com/d/1y0kW_JNF0__YJQrdi-4o0-WENYPYACz_=w720" alt="" loading="lazy">
+        <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vid-txt">Recorte de un seto alto</span>
+      </button>
+      <button class="vid" data-video="1Gc1j2g1ttGccdrBrMZJe_vCh4STT28ay" data-t="Trasplante de una palmera con grúa">
+        <img src="https://lh3.googleusercontent.com/d/1Gc1j2g1ttGccdrBrMZJe_vCh4STT28ay=w720" alt="" loading="lazy">
+        <span class="play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="vid-txt">Trasplante de una palmera con grúa</span>
+      </button>
+    </div>
+    <p class="desliza">Desliza para ver más vídeos</p>
+  </div>
 </section>
-<section style="padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 32px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Así de fácil</h2>
-<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 24px">
-<li style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 22px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #12603C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800">1</span>
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Mándanos una foto</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 16px">Por WhatsApp, con lo que necesitas. Sin formularios largos.</p>
-</li>
-<li style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 22px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #12603C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800">2</span>
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Presupuesto en menos de 24 h</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 16px">Claro y sin compromiso. Si hace falta, pasamos a verlo.</p>
-</li>
-<li style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding: 26px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 22px">
-<span style="width: 44px; height: 44px; border-radius: 50%; background: #12603C; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800">3</span>
-<h3 style="margin: 0; font-size: 20px; color: #0E3B27">Nos ocupamos del resto</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 16px">Tú disfrutas del jardín; nosotros lo mantenemos.</p>
-</li>
-</ol>
-</div>
+
+<section class="sec" id="trabajos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="real">Fotos de SAUPER</span>
+      <h2>Trabajos reales.</h2>
+      <p>Nada de fotos de catálogo. Esto es lo que hacemos cada semana en jardines de la zona. Toca una foto para verla en grande.</p>
+    </div>
+    <div class="galeria">
+      <button class="foto-g ancha" data-foto="https://lh3.googleusercontent.com/d/1bxmM0pOHu6UfXmr_4YPDo_MKVftM4sbc=w2000" data-t="Palmeras saneadas"><img src="https://lh3.googleusercontent.com/d/1bxmM0pOHu6UfXmr_4YPDo_MKVftM4sbc=w1000" alt="Dos palmeras saneadas" loading="lazy" style="object-position:50% 30%"><span>Palmeras saneadas</span></button>
+      <button class="foto-g alta" data-foto="https://lh3.googleusercontent.com/d/1gnubokvzKA3itPOHB0KQC1tsuuIj1DX8=w1400" data-t="Palmera limpia en una urbanización"><img src="https://lh3.googleusercontent.com/d/1gnubokvzKA3itPOHB0KQC1tsuuIj1DX8=w700" alt="Palmera limpia" loading="lazy"><span>Palmera limpia</span></button>
+      <button class="foto-g" data-foto="https://lh3.googleusercontent.com/d/19u_W3Rtt5c6OGDH9U-MeIdl49ISab-ru=w2000" data-t="Plantación con riego por goteo"><img src="https://lh3.googleusercontent.com/d/19u_W3Rtt5c6OGDH9U-MeIdl49ISab-ru=w700" alt="Plantas nuevas con riego por goteo" loading="lazy"><span>Plantación y goteo</span></button>
+      <button class="foto-g" data-foto="https://lh3.googleusercontent.com/d/1-9-PZDgCjaxfrCsKN_HbI6Gcxnajl2KN=w2000" data-t="Retirada de restos de poda"><img src="https://lh3.googleusercontent.com/d/1-9-PZDgCjaxfrCsKN_HbI6Gcxnajl2KN=w700" alt="Remolque cargado con hojas de palmera" loading="lazy" style="object-position:35% 50%"><span>Retirada de restos</span></button>
+      <button class="foto-g ancha" data-foto="https://lh3.googleusercontent.com/d/104uk_H8UhpvkupJTpE5uQn125PcxBdGe=w2000" data-t="Poda de árboles grandes en una finca"><img src="https://lh3.googleusercontent.com/d/104uk_H8UhpvkupJTpE5uQn125PcxBdGe=w1000" alt="Árboles grandes podados en una finca" loading="lazy"><span>Poda de árboles grandes</span></button>
+    </div>
+    <p class="galeria-nota">Todas las fotos y vídeos de esta página son trabajos de SAUPER.</p>
+  </div>
 </section>
-<section id="trabajos" style="background: #FFFFFF; padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Nuestros trabajos</h2>
-<p style="margin: 0; color: #3B4D42">Jardines reales que cuidamos en Alicante, San Juan y El Campello.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 24px">
-<figure style="flex: 1 1 360px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
-<div style="height: 300px; border-radius: 22px; border: 2px dashed #9DB8A6; background: #EEF3EC; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #4A5D51; font-weight: 600">Foto ANTES<br>(un jardín real vuestro)</div>
-<figcaption style="font-size: 14px; font-weight: 700; color: #4A5D51; text-transform: uppercase; letter-spacing: 0.06em">Antes</figcaption>
-</figure>
-<figure style="flex: 1 1 360px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 10px">
-<div style="height: 300px; border-radius: 22px; border: 2px dashed #9DB8A6; background: #EEF3EC; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; color: #4A5D51; font-weight: 600">Foto DESPUÉS<br>(el mismo jardín terminado)</div>
-<figcaption style="font-size: 14px; font-weight: 700; color: #12603C; text-transform: uppercase; letter-spacing: 0.06em">Después</figcaption>
-</figure>
-</div>
-</div>
+
+<section class="sec" id="limpieza" style="padding-top:0">
+  <div class="wrap">
+    <div class="limpia">
+      <div class="foto"><img src="https://lh3.googleusercontent.com/d/1P0jl23o98o_1CXjyQIbN2JH1gKUsKZYw=w1400" alt="Finca limpia tras la poda" loading="lazy"></div>
+      <div class="txt">
+        <h2>Y lo dejamos todo limpio.</h2>
+        <p>Cuando acabamos, no queda ni una rama. Cargamos los restos y nos los llevamos. Y si tu jardín o tu parcela necesitan una limpieza a fondo, también la hacemos.</p>
+        <ul>
+          <li>Restos de poda</li>
+          <li>Desbroce</li>
+          <li>Parcelas y solares</li>
+          <li>Hojas y palmas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="nosotros" style="padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 10px; max-width: 720px">
-<p style="margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #12603C">Nosotros</p>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">¿Por qué elegir SAUPER?</h2>
-<p style="margin: 0; color: #3B4D42">Somos una empresa de jardinería de Alicante. Cuidamos jardines de viviendas, comunidades, urbanizaciones y negocios para que estén bien todo el año.</p>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 20px">
-<div style="flex: 1 1 250px; min-width: 0; padding: 24px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 20px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; color: #12603C">01</span>
-<h3 style="margin: 0; font-size: 19px; color: #0E3B27">Experiencia</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px">Especialistas en jardinería y mantenimiento en Alicante y alrededores.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; padding: 24px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 20px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; color: #12603C">02</span>
-<h3 style="margin: 0; font-size: 19px; color: #0E3B27">Trato personalizado</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px">Cada trabajo se adapta a tu jardín y a lo que necesitas.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; padding: 24px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 20px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; color: #12603C">03</span>
-<h3 style="margin: 0; font-size: 19px; color: #0E3B27">Cuidado integral</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px">Poda, limpieza, mantenimiento y mejora de exteriores, con un solo equipo.</p>
-</div>
-<div style="flex: 1 1 250px; min-width: 0; padding: 24px; background: #FFFFFF; border: 1px solid #E3E8E0; border-radius: 20px; display: flex; flex-direction: column; gap: 8px">
-<span style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; color: #12603C">04</span>
-<h3 style="margin: 0; font-size: 19px; color: #0E3B27">Respeto por el entorno</h3>
-<p style="margin: 0; color: #3B4D42; font-size: 15px">Soluciones eficientes y respetuosas con el medio natural.</p>
-</div>
-</div>
-</div>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Así de fácil.</h2>
+    </div>
+    <ol class="pasos">
+      <li><h3>Nos escribes</h3><p>Por WhatsApp o llamada. Si puedes, mándanos una foto del jardín.</p></li>
+      <li><h3>Vamos a verlo</h3><p>Te damos un presupuesto claro, sin sorpresas.</p></li>
+      <li><h3>Lo dejamos listo</h3><p>Hacemos el trabajo y nos llevamos todos los restos.</p></li>
+    </ol>
+  </div>
 </section>
-<section style="background: #FFFFFF; padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<p style="margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #12603C">Diseño de jardines</p>
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Mira cómo quedará tu jardín antes de empezar</h2>
-<p style="margin: 0; color: #3B4D42">Si quieres renovarlo, te preparamos una imagen 3D de tu jardín terminado para que decidas con calma: plantas, caminos, césped y zonas de descanso.</p>
-<div style="padding-top: 6px"><a href="https://wa.me/34663614939" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border-radius: 999px; background: #12603C; color: #FFFFFF; font-weight: 700; text-decoration: none">Quiero renovar mi jardín</a></div>
-</div>
-<div style="flex: 1 1 460px; min-width: 0; height: 380px; border-radius: 28px; border: 2px dashed #9DB8A6; background: #EEF3EC; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 24px; color: #4A5D51">
-<svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"></path><polyline points="3.3 7 12 12 20.7 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
-<span style="font-weight: 700">Render 3D del jardín (Blender)</span>
-<span style="font-size: 15px">Aquí va la imagen del diseño terminado</span>
-</div>
-</div>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Por qué SAUPER.</h2>
+    </div>
+    <div class="confia">
+      <div class="nota-google">
+        <span class="estrellas" aria-hidden="true">★★★★★</span>
+        <b>[Nota] en Google</b>
+        <span style="color:var(--gris);font-size:15px">[Nº] reseñas. Aquí irá vuestra nota real de la ficha de Google.</span>
+      </div>
+      <div class="hueco">Aquí irán 3 reseñas reales de clientes, copiadas de Google con su nombre.</div>
+      <ul class="valores">
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Trabajo en altura con equipo</b><span>Cuerdas, arnés y grúa cuando hace falta.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Lo dejamos limpio</b><span>Nos llevamos todos los restos.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Presupuesto claro</b><span>Sabes lo que pagas antes de empezar.</span></div></li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><div><b>Un mismo equipo todo el año</b><span>Conocemos tu jardín y sabemos qué necesita.</span></div></li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section style="padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 32px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Lo que dicen nuestros clientes</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 24px">
-<blockquote style="flex: 1 1 300px; min-width: 0; margin: 0; padding: 26px; border-radius: 22px; border: 2px dashed #9DB8A6; background: #FFFFFF; color: #4A5D51; display: flex; flex-direction: column; gap: 10px">
-<span style="font-weight: 700">[Reseña real de Google]</span>
-<span style="font-size: 15px">Nombre del cliente · zona</span>
-</blockquote>
-<blockquote style="flex: 1 1 300px; min-width: 0; margin: 0; padding: 26px; border-radius: 22px; border: 2px dashed #9DB8A6; background: #FFFFFF; color: #4A5D51; display: flex; flex-direction: column; gap: 10px">
-<span style="font-weight: 700">[Reseña real de Google]</span>
-<span style="font-size: 15px">Nombre del cliente · zona</span>
-</blockquote>
-<blockquote style="flex: 1 1 300px; min-width: 0; margin: 0; padding: 26px; border-radius: 22px; border: 2px dashed #9DB8A6; background: #FFFFFF; color: #4A5D51; display: flex; flex-direction: column; gap: 10px">
-<span style="font-weight: 700">[Reseña real de Google]</span>
-<span style="font-size: 15px">Nombre del cliente · zona</span>
-</blockquote>
-</div>
-</div>
+
+<section class="sec" id="preguntas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Preguntas frecuentes.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>¿En qué zonas trabajáis?</summary><p>Alicante, San Juan, El Campello y alrededores. Si estás cerca, escríbenos y lo vemos.</p></details>
+      <details><summary>¿Cuánto cuesta podar una palmera?</summary><p>Depende de la altura y de cómo esté. Mándanos una foto por WhatsApp y te damos un precio.</p></details>
+      <details><summary>¿Os lleváis los restos?</summary><p>Sí. Cargamos todo y nos lo llevamos. El jardín queda listo.</p></details>
+      <details><summary>¿Hacéis mantenimiento fijo?</summary><p>Sí. Pasamos cada semana, cada quince días o cada mes, según lo que necesite tu jardín.</p></details>
+    </div>
+  </div>
 </section>
-<section id="preguntas" style="background: #FFFFFF; padding: 72px 0">
-<div style="max-width: 860px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 24px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 42px; line-height: 1.1; color: #0E3B27">Preguntas frecuentes</h2>
-<div style="display: flex; flex-direction: column; gap: 12px">
-<details open style="padding: 20px 24px; border-radius: 16px; background: #F7F8F3; border: 1px solid #E3E8E0">
-<summary style="font-weight: 700; font-size: 18px; color: #0E3B27; cursor: pointer">¿Qué servicios de jardinería ofrecéis?</summary>
-<p style="margin: 12px 0 0; color: #3B4D42; font-size: 16px">Mantenimiento, poda de árboles y setos, limpieza de zonas verdes, diseño de jardines y tratamientos para plantas en Alicante, San Juan y El Campello.</p>
-</details>
-<details style="padding: 20px 24px; border-radius: 16px; background: #F7F8F3; border: 1px solid #E3E8E0">
-<summary style="font-weight: 700; font-size: 18px; color: #0E3B27; cursor: pointer">¿Trabajáis con particulares y comunidades?</summary>
-<p style="margin: 12px 0 0; color: #3B4D42; font-size: 16px">Sí: viviendas, comunidades de vecinos, urbanizaciones y negocios.</p>
-</details>
-<details style="padding: 20px 24px; border-radius: 16px; background: #F7F8F3; border: 1px solid #E3E8E0">
-<summary style="font-weight: 700; font-size: 18px; color: #0E3B27; cursor: pointer">¿Hacéis mantenimiento periódico?</summary>
-<p style="margin: 12px 0 0; color: #3B4D42; font-size: 16px">Sí, mantenimiento regular durante todo el año.</p>
-</details>
-<details style="padding: 20px 24px; border-radius: 16px; background: #F7F8F3; border: 1px solid #E3E8E0">
-<summary style="font-weight: 700; font-size: 18px; color: #0E3B27; cursor: pointer">¿Podáis árboles y setos?</summary>
-<p style="margin: 12px 0 0; color: #3B4D42; font-size: 16px">Sí, podamos árboles, arbustos y setos, y nos llevamos los restos.</p>
-</details>
-</div>
-</div>
+
+<section class="contacto" id="contacto">
+  <img src="https://lh3.googleusercontent.com/d/1bxmM0pOHu6UfXmr_4YPDo_MKVftM4sbc=w1400" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="grid">
+      <div class="txt">
+        <h2>¿Hablamos de tu jardín?</h2>
+        <p>Mándanos una foto por WhatsApp y te decimos qué necesita y cuánto cuesta.</p>
+        <div class="botones">
+          <a class="btn btn-lima" href="https://wa.me/34663614939?text=Hola%20SAUPER%2C%20quiero%20pedir%20un%20presupuesto">Presupuesto por WhatsApp</a>
+          <a class="btn btn-claro" href="tel:+34663614939">Llamar al 663 61 49 39</a>
+        </div>
+        <ul class="zonas"><li>Alicante</li><li>San Juan</li><li>El Campello</li></ul>
+      </div>
+      <form class="form" onsubmit="return false">
+        <label for="f-nombre">Nombre</label>
+        <input id="f-nombre" autocomplete="name">
+        <label for="f-tel">Teléfono</label>
+        <input id="f-tel" type="tel" autocomplete="tel">
+        <label for="f-serv">¿Qué necesitas?</label>
+        <select id="f-serv"><option>Mantenimiento</option><option>Poda o palmeras</option><option>Setos</option><option>Jardín nuevo o riego</option><option>Limpieza</option><option>Otra cosa</option></select>
+        <label for="f-msg">Cuéntanos un poco</label>
+        <textarea id="f-msg"></textarea>
+        <button class="btn btn-verde" type="submit">Quiero mi presupuesto</button>
+      </form>
+    </div>
+  </div>
 </section>
-<section id="zonas" style="padding: 64px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 34px; line-height: 1.1; color: #0E3B27">Dónde trabajamos</h2>
-<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 12px">
-<li style="padding: 10px 20px; border-radius: 999px; background: #FFFFFF; border: 1px solid #C9D6CC; font-weight: 700">Alicante</li>
-<li style="padding: 10px 20px; border-radius: 999px; background: #FFFFFF; border: 1px solid #C9D6CC; font-weight: 700">San Juan</li>
-<li style="padding: 10px 20px; border-radius: 999px; background: #FFFFFF; border: 1px solid #C9D6CC; font-weight: 700">El Campello</li>
-<li style="padding: 10px 20px; border-radius: 999px; background: #FFFFFF; border: 1px solid #C9D6CC; font-weight: 700">Provincia de Alicante</li>
-</ul>
-</div>
-</section>
-<section id="contacto" style="background: #0E3B27; color: #FFFFFF; padding: 72px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
-<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
-<h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 44px; line-height: 1.1; color: #FFFFFF">¿Hablamos de tu jardín?</h2>
-<p style="margin: 0; color: #D3E2D8">Escríbenos por WhatsApp o déjanos tus datos. Te respondemos con presupuesto en menos de 24 horas.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a href="https://wa.me/34663614939" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px; border-radius: 999px; background: #FFFFFF; color: #0E3B27; font-weight: 800; text-decoration: none">
-<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
-WhatsApp
-</a>
-<a href="tel:+34663614939" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 22px; border-radius: 999px; border: 1.5px solid #8FB59D; color: #FFFFFF; font-weight: 700; text-decoration: none">663 61 49 39</a>
-</div>
-<p style="margin: 0; color: #D3E2D8; font-size: 15px">[correo de SAUPER]</p>
-</div>
-<form style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; color: #17261D; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
-<label for="f-nombre" style="font-weight: 700; font-size: 15px">Nombre</label>
-<input id="f-nombre" type="text" placeholder="Tu nombre" style="min-height: 48px; border-radius: 12px; border: 1px solid #C9D6CC; padding: 0 14px; font: inherit">
-<label for="f-tel" style="font-weight: 700; font-size: 15px">Teléfono</label>
-<input id="f-tel" type="tel" placeholder="600 000 000" style="min-height: 48px; border-radius: 12px; border: 1px solid #C9D6CC; padding: 0 14px; font: inherit">
-<label for="f-servicio" style="font-weight: 700; font-size: 15px">Servicio</label>
-<select id="f-servicio" style="min-height: 48px; border-radius: 12px; border: 1px solid #C9D6CC; padding: 0 12px; font: inherit; background: #FFFFFF">
-<option>Mantenimiento de jardín</option>
-<option>Poda y limpieza</option>
-<option>Diseño de jardín</option>
-<option>Tratamientos de plantas</option>
-<option>Servicios de limpieza</option>
-</select>
-<label for="f-msg" style="font-weight: 700; font-size: 15px">Cuéntanos qué necesitas</label>
-<textarea id="f-msg" rows="3" placeholder="Ej.: mantenimiento mensual de un jardín de 200 m²" style="border-radius: 12px; border: 1px solid #C9D6CC; padding: 12px 14px; font: inherit; resize: vertical"></textarea>
-<button type="button" style="min-height: 52px; border-radius: 999px; border: 0; background: #12603C; color: #FFFFFF; font: inherit; font-weight: 800; cursor: pointer">Quiero mi presupuesto</button>
-</form>
-</div>
-</section>
-<footer style="background: #0A2C1D; color: #BFD3C6; padding: 40px 0">
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px; font-size: 14px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<span style="font-weight: 800; color: #FFFFFF; font-size: 16px">SAUPER</span>
-<span>Jardinería y limpieza en Alicante, San Juan y El Campello</span>
-<span>© 2026 SAUPER</span>
-</div>
-<nav aria-label="Servicios" style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-weight: 700; color: #FFFFFF">Servicios</span>
-<a href="#" style="color: #BFD3C6">Mantenimiento de jardines</a>
-<a href="servicio-poda.html" style="color: #BFD3C6">Poda y limpieza de jardines</a>
-<a href="#" style="color: #BFD3C6">Diseño y mejora de jardines</a>
-<a href="#" style="color: #BFD3C6">Tratamientos de plantas</a>
-<a href="#" style="color: #BFD3C6">Servicios de limpieza</a>
-</nav>
-<nav aria-label="Legal" style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-weight: 700; color: #FFFFFF">Legal</span>
-<a href="#" style="color: #BFD3C6">Aviso legal</a>
-<a href="#" style="color: #BFD3C6">Privacidad</a>
-<a href="#" style="color: #BFD3C6">Cookies</a>
-</nav>
-</div>
+
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <b style="color:#fff">SAUPER · Jardinería y limpieza</b>
+    <nav><a href="#servicios">Servicios</a><a href="#videos">Vídeos</a><a href="#trabajos">Trabajos</a><a href="#preguntas">Preguntas</a><a href="servicio-poda.html">Poda de árboles</a></nav>
+    <span>Maqueta de diseño. Fotos y vídeos cedidos por SAUPER.</span>
+  </div>
 </footer>
+
+<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Vídeo o foto">
+  <div class="visor-caja">
+    <button class="visor-cerrar" id="visor-cerrar" aria-label="Cerrar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="visor-marco" id="visor-marco"></div>
+    <p class="visor-txt" id="visor-txt"></p>
+  </div>
 </div>
+
+<div class="barra" id="barra">
+  <a class="btn btn-borde" href="tel:+34663614939">Llamar</a>
+  <a class="btn btn-verde" href="https://wa.me/34663614939?text=Hola%20SAUPER%2C%20quiero%20pedir%20un%20presupuesto">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+  var menu = document.getElementById('menu');
+  var abrir = document.getElementById('abrir');
+  function cerrarMenu(){ menu.classList.remove('abierto'); abrir.setAttribute('aria-expanded', 'false'); }
+  abrir.addEventListener('click', function(){ menu.classList.add('abierto'); abrir.setAttribute('aria-expanded', 'true'); });
+  document.getElementById('cerrar').addEventListener('click', cerrarMenu);
+  var enlaces = menu.querySelectorAll('a');
+  for (var i = 0; i < enlaces.length; i++){ enlaces[i].addEventListener('click', cerrarMenu); }
+
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var slides = document.querySelectorAll('.slide');
+  var puntos = document.querySelectorAll('#puntos button');
+  var cap = document.getElementById('cap');
+  var actual = 0, timer = null;
+  function ir(n){
+    slides[actual].classList.remove('on'); puntos[actual].classList.remove('on');
+    actual = n;
+    var img = slides[actual].querySelector('img'); img.removeAttribute('loading');
+    slides[actual].classList.add('on'); puntos[actual].classList.add('on');
+    cap.textContent = 'Trabajo real: ' + slides[actual].getAttribute('data-cap').toLowerCase();
+  }
+  function siguiente(){ ir((actual + 1) % slides.length); }
+  function arrancar(){ if (!quieto){ clearInterval(timer); timer = setInterval(siguiente, 5500); } }
+  for (var j = 0; j < puntos.length; j++){ (function(k){ puntos[k].addEventListener('click', function(){ ir(k); arrancar(); }); })(j); }
+  arrancar();
+
+  var arbol = document.getElementById('arbol');
+  var savia = document.getElementById('savia');
+  var pendiente = false;
+  function crecer(){
+    pendiente = false;
+    var r = arbol.getBoundingClientRect();
+    var p = (window.innerHeight * 0.65 - r.top) / r.height;
+    p = Math.max(0, Math.min(1, p));
+    savia.style.height = (p * 100) + '%';
+  }
+  window.addEventListener('scroll', function(){ if (!pendiente){ pendiente = true; requestAnimationFrame(crecer); } }, {passive: true});
+  crecer();
+
+  var visor = document.getElementById('visor');
+  var marco = document.getElementById('visor-marco');
+  var vtxt = document.getElementById('visor-txt');
+  var ultimo = null;
+  function abrirVisor(html, texto, esFoto){
+    ultimo = document.activeElement;
+    marco.innerHTML = html; vtxt.textContent = texto;
+    visor.classList.toggle('foto', esFoto);
+    visor.classList.add('abierto');
+    document.getElementById('visor-cerrar').focus();
+  }
+  function cerrarVisor(){ visor.classList.remove('abierto'); marco.innerHTML = ''; if (ultimo) ultimo.focus(); }
+  var vids = document.querySelectorAll('[data-video]');
+  for (var v = 0; v < vids.length; v++){
+    vids[v].addEventListener('click', function(){
+      var id = this.getAttribute('data-video');
+      abrirVisor('<iframe src="https://drive.google.com/file/d/' + id + '/preview" allow="autoplay; fullscreen" allowfullscreen title="' + this.getAttribute('data-t') + '"></iframe>', this.getAttribute('data-t'), false);
+    });
+  }
+  var fotos = document.querySelectorAll('[data-foto]');
+  for (var f = 0; f < fotos.length; f++){
+    fotos[f].addEventListener('click', function(){
+      abrirVisor('<img src="' + this.getAttribute('data-foto') + '" alt="' + this.getAttribute('data-t') + '">', this.getAttribute('data-t'), true);
+    });
+  }
+  document.getElementById('visor-cerrar').addEventListener('click', cerrarVisor);
+  visor.addEventListener('click', function(e){ if (e.target === visor) cerrarVisor(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape'){ cerrarVisor(); cerrarMenu(); } });
+
+  var barra = document.getElementById('barra');
+  var hero = document.getElementById('inicio');
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){ barra.classList.toggle('ver', !e[0].isIntersecting); }, {threshold: 0.15}).observe(hero);
+  } else { barra.classList.add('ver'); }
+})();
+</script>
 </body>
 </html>
