@@ -4,131 +4,341 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Propuesta web para SAUPER</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0F3A27">
+<title>Propuesta para SAUPER</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F7F8F3;color:#17261D;font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.55}
-main{max-width:760px;margin:0 auto;padding:28px 18px 56px}
-h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:600;color:#0E3B27;line-height:1.15}
-h1{font-size:34px;margin:8px 0 12px}
-h2{font-size:26px;margin:40px 0 12px}
-p{margin:0 0 12px}
-a{color:#12603C}
-.top{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#12603C}
-.lead{font-size:19px;background:#FFFFFF;border:1px solid #E3E8E0;border-radius:18px;padding:18px 20px}
-table{width:100%;border-collapse:collapse;background:#FFFFFF;border-radius:14px;overflow:hidden;font-size:15px;margin:8px 0 12px}
-th,td{padding:10px 12px;border-bottom:1px solid #E3E8E0;text-align:left;vertical-align:top}
-th{background:#E8F0EA;color:#0E3B27}
-.cards{display:flex;flex-direction:column;gap:14px}
-.card{background:#FFFFFF;border:1px solid #E3E8E0;border-radius:18px;padding:18px 20px}
-.card.rec{border:2px solid #12603C}
-.card h3{margin:0 0 4px;font-size:20px;color:#0E3B27}
-.price{font-size:26px;font-weight:800;color:#12603C;margin:2px 0 10px}
-.price s{font-size:16px;color:#6B7B71;font-weight:600;margin-left:6px}
-.tag{display:inline-block;background:#12603C;color:#FFFFFF;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 10px;margin-bottom:8px}
-ul,ol{margin:0 0 12px;padding-left:22px}
-li{margin-bottom:6px}
-.small{font-size:14px;color:#4A5D51}
-.cta{display:block;text-align:center;background:#12603C;color:#FFFFFF;text-decoration:none;font-weight:800;border-radius:999px;padding:16px 20px;margin:12px 0}
-.ghost{background:#FFFFFF;color:#12603C;border:1.5px solid #12603C}
+:root{--pino:#0F3A27;--verde:#12603C;--cal:#F3F6EF;--blanco:#FFFFFF;--lima:#C9E265;--hoja:#55665B;--linea:#DCE3D8}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cal);color:var(--pino);font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--verde)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--lima);outline-offset:3px;border-radius:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:650;line-height:1.08;margin:0;letter-spacing:-0.01em}
+h1{font-size:clamp(40px,9vw,68px)}
+h2{font-size:clamp(30px,6vw,44px)}
+h3{font-size:22px}
+p{margin:0}
+.muted{color:var(--hoja)}
+.small{font-size:14px}
+
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;max-width:1080px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.03em;font-size:18px;color:var(--pino);text-decoration:none}
+.logo{width:40px;height:40px;overflow:hidden;position:relative;display:inline-block;flex:none}
+.logo img{position:absolute;width:69px;left:-15px;top:-10px;max-width:none}
+.bar-note{font-size:14px;color:var(--hoja)}
+
+.hero{padding:20px 0 16px}
+.hero-grid{display:grid;gap:28px}
+.hero-text{display:grid;gap:18px}
+.hero-text .lede{font-size:19px;max-width:34em}
+.hero-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#cfe0c6}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font-weight:800;font-size:17px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn-main{background:var(--verde);color:var(--blanco)}
+.btn-line{background:transparent;color:var(--blanco);border:1.5px solid rgba(255,255,255,.55)}
+.hero .btn{justify-self:start}
+
+section.block{padding:40px 0}
+.head{display:grid;gap:12px;max-width:40em;margin-bottom:28px}
+
+/* Lo que puede dar: el año de un cliente */
+.year{background:var(--pino);color:var(--blanco);border-radius:32px;padding:28px 20px}
+.year h2{color:var(--blanco)}
+.year .muted{color:#C3D3C8}
+.pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:22px 0}
+.pick button{font-family:inherit;font-size:14px;font-weight:600;min-height:56px;padding:8px 6px;border-radius:16px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:var(--blanco);cursor:pointer;display:grid;gap:2px;justify-items:center;line-height:1.2}
+.pick button{align-content:center}
+.pick button span{font-size:13px}
+.pick button b{font-size:16px;font-weight:800}
+.pick-label{font-size:14px;font-weight:700;margin:18px 0 -12px}
+.pick button[aria-pressed="true"]{background:var(--lima);border-color:var(--lima);color:var(--pino)}
+.months{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;list-style:none;margin:0;padding:0}
+.months li{aspect-ratio:1/1.15;border-radius:14px;background:var(--lima);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px}
+.months li .fill{position:absolute;left:0;right:0;bottom:0;background:#2E8B57;height:0;transition:height .5s ease}
+.months li span{position:relative;font-size:13px;font-weight:800;color:var(--pino)}
+.months li.paid span{color:var(--blanco)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;font-size:14px;color:#C3D3C8}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:8px;vertical-align:-2px}
+.result{margin-top:22px;font-size:20px;line-height:1.45}
+.result strong{color:var(--lima)}
+
+/* Opciones */
+.plans{display:grid;gap:16px}
+.plan{background:var(--blanco);border-radius:24px;padding:24px 22px;display:grid;gap:14px;align-content:start;border:1px solid var(--linea)}
+.plan .for{color:var(--hoja)}
+.price{font-family:'Fraunces',Georgia,serif;font-size:44px;font-weight:650;line-height:1}
+.price s{font-family:'Manrope',sans-serif;font-size:17px;font-weight:500;color:var(--hoja);margin-left:8px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.plan li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.plan li svg{margin-top:4px}
+.plan .meta{font-size:14px;color:var(--hoja);border-top:1px solid var(--linea);padding-top:12px}
+.plan.star{background:var(--verde);color:var(--blanco);border:0}
+.plan.star .for,.plan.star .meta,.plan.star .price s{color:#CFE3D6}
+.plan.star .meta{border-top-color:rgba(255,255,255,.25)}
+.badge{justify-self:start;background:var(--lima);color:var(--pino);font-weight:800;font-size:14px;border-radius:999px;padding:4px 12px}
+.note{margin-top:18px;font-size:15px;color:var(--hoja);max-width:46em}
+
+/* Anuncios */
+.ads{display:grid;gap:22px}
+.free{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px}
+.free h3{margin-bottom:8px}
+.calc{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px}
+.calc .pick button{border-color:var(--linea);color:var(--pino)}
+.calc .pick button[aria-pressed="true"]{background:var(--pino);border-color:var(--pino);color:var(--blanco)}
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:4px 0 16px}
+.flow div{background:var(--cal);border-radius:16px;padding:14px 10px;text-align:center}
+.flow b{display:block;font-family:'Fraunces',Georgia,serif;font-size:32px;line-height:1.1;font-weight:650}
+.flow span{font-size:13px;color:var(--hoja)}
+
+/* Pasos */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:paso}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;position:relative;padding-bottom:26px}
+.steps li::before{counter-increment:paso;content:counter(paso);width:44px;height:44px;border-radius:50%;background:var(--pino);color:var(--blanco);display:flex;align-items:center;justify-content:center;font-weight:800;position:relative;z-index:1}
+.steps li::after{content:"";position:absolute;left:21px;top:44px;bottom:0;width:2px;background:var(--linea)}
+.steps li:last-child::after{display:none}
+.steps h3{font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;margin:9px 0 4px}
+.when{font-size:14px;font-weight:700;color:var(--verde)}
+.steps p{max-width:42em}
+
+.two{display:grid;gap:22px}
+.box{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px}
+.box h3{margin-bottom:12px}
+.box ul{margin:0;padding-left:20px;display:grid;gap:8px}
+
+.end{background:var(--pino);color:var(--blanco);border-radius:32px;padding:36px 22px;display:grid;gap:16px}
+.end h2{color:var(--blanco)}
+.end p{color:#D5E3DA;max-width:34em}
+.end .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+footer{padding:28px 0 40px;font-size:13px;color:var(--hoja)}
+
+@media (min-width:820px){
+  section.block{padding:56px 0}
+  .hero{padding:36px 0 40px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}
+  .year{padding:44px}
+  .months{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .plans{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}
+  .plan.star{transform:translateY(-12px)}
+  .ads{grid-template-columns:1fr 1.3fr;align-items:start}
+  .two{grid-template-columns:1fr 1fr}
+  .end{padding:52px}
+}
+@media (prefers-reduced-motion:reduce){.months li .fill{transition:none}}
 </style>
 </head>
 <body>
+
+<header class="bar">
+  <a class="brand" href="index.html"><span class="logo"><img src="https://sauper.es/wp-content/themes/default/assets/img/logo.png" alt=""></span>SAUPER</a>
+  <span class="bar-note">Propuesta para David</span>
+</header>
+
 <main>
-<p class="top">Propuesta para SAUPER · noviembre 2026</p>
-<h1>Una web pensada para que os entren clientes</h1>
-<p class="lead">Hola, David. Te propongo tres opciones. Mi recomendación es la <strong>opción 2</strong>: con un solo cliente nuevo de mantenimiento la recuperáis en unos 3 meses.</p>
-<a class="cta ghost" href="index.html">Ver cómo quedaría vuestra web</a>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Una web que os traiga clientes</h1>
+      <p class="lede">Hola, David. Aquí tienes las tres opciones que te propongo y lo que puede daros cada una. Te recomiendo la del medio: se paga sola con un único cliente nuevo.</p>
+      <a class="btn btn-main" href="index.html">Ver cómo quedaría vuestra web</a>
+    </div>
+    <div class="hero-photo"><img src="https://sauper.es/wp-content/uploads/2026/05/Perfekt-gemahter-Rasen-%E2%80%93-Tipps-fur-ein-gleichmasiges-Schnittbild.jpg" alt="Césped recién cortado en un jardín"></div>
+  </div>
+</section>
 
-<h2>Qué podéis ganar</h2>
-<p>El mantenimiento de un jardín de 100 a 200 m² se paga de media unos 200 € al mes en España. Con esa cifra, esto tarda cada opción en pagarse con un único cliente nuevo:</p>
-<table>
-<tr><th>Opción</th><th>Inversión</th><th>Lo que os paga en un año 1 cliente nuevo de mantenimiento</th><th>Se recupera en</th></tr>
-<tr><td>1 · Básica</td><td>350 €</td><td>2.400 €</td><td>Menos de 2 meses</td></tr>
-<tr><td>2 · Recomendada</td><td>650 €</td><td>2.400 €</td><td>Unos 3 meses</td></tr>
-<tr><td>3 · Completa</td><td>1.200 €</td><td>2.400 €</td><td>6 meses</td></tr>
-</table>
-<p class="small">Es dinero que entra, no beneficio, y con un precio medio de mercado: en la llamada lo calculamos con vuestra cuota real.</p>
+<section class="block" aria-labelledby="t-ano">
+  <div class="wrap">
+    <div class="year">
+      <div class="head">
+        <h2 id="t-ano">Lo que os deja un solo cliente nuevo</h2>
+        <p class="muted">Un mantenimiento de jardín se paga de media unos 200 € al mes en España. Cada casilla es un mes de ese cliente: las verdes pagan la web y las de color lima ya son para vosotros.</p>
+      </div>
+      <div class="pick" role="group" aria-label="Elige una opción">
+        <button type="button" data-price="350" data-time="menos de 2 meses" data-keep="2.050 €" aria-pressed="false"><span>Básica</span><b>350 €</b></button>
+        <button type="button" data-price="650" data-time="algo más de 3 meses" data-keep="1.750 €" aria-pressed="true"><span>Recomendada</span><b>650 €</b></button>
+        <button type="button" data-price="1200" data-time="6 meses" data-keep="1.200 €" aria-pressed="false"><span>Completa</span><b>1.200 €</b></button>
+      </div>
+      <ol class="months" id="months" aria-hidden="true">
+        <li><div class="fill"></div><span>1</span></li><li><div class="fill"></div><span>2</span></li><li><div class="fill"></div><span>3</span></li><li><div class="fill"></div><span>4</span></li><li><div class="fill"></div><span>5</span></li><li><div class="fill"></div><span>6</span></li><li><div class="fill"></div><span>7</span></li><li><div class="fill"></div><span>8</span></li><li><div class="fill"></div><span>9</span></li><li><div class="fill"></div><span>10</span></li><li><div class="fill"></div><span>11</span></li><li><div class="fill"></div><span>12</span></li>
+      </ol>
+      <div class="legend"><span><i style="background:#2E8B57"></i>Paga la web</span><span><i style="background:var(--lima)"></i>Para vosotros</span></div>
+      <p class="result" id="result" aria-live="polite">La web se paga en <strong>algo más de 3 meses</strong>. El primer año, ese cliente os deja <strong>1.750 €</strong> después de pagarla.</p>
+      <p class="small muted" style="margin-top:12px">Es dinero que entra, no beneficio, y con un precio medio de mercado. En la llamada lo calculamos con vuestra cuota real.</p>
+    </div>
+  </div>
+</section>
 
-<h2>Las tres opciones</h2>
-<p>Las tres parten de la maqueta y mantienen vuestro dominio, sauper.es, para no perder lo que ya tenéis en Google.</p>
-<div class="cards">
-<div class="card">
-<h3>1 · Básica</h3>
-<p class="price">350 €</p>
-<ul>
-<li>Portada nueva con WhatsApp y llamada a la vista</li>
-<li>Ficha de Google completada y enlazada a la web</li>
-<li>Cambio a la web nueva sin perder posiciones en Google</li>
-<li>2 rondas de cambios · Plazo: 1 semana</li>
-</ul>
-</div>
-<div class="card rec">
-<span class="tag">Recomendada</span>
-<h3>2 · Recomendada</h3>
-<p class="price">650 € <s>900 €</s></p>
-<ul>
-<li>Todo lo de la Básica</li>
-<li>Una página por servicio (5) para salir en más búsquedas</li>
-<li>Sección de antes y después y reseñas</li>
-<li>3–4 imágenes 3D de jardines diseñados</li>
-<li>Medición de cuántos os llaman o escriben desde la web</li>
-<li><strong>3 meses de mantenimiento gratis</strong> (valor 75 €)</li>
-<li>2 rondas de cambios · Plazo: 2–3 semanas</li>
-</ul>
-</div>
-<div class="card">
-<h3>3 · Completa</h3>
-<p class="price">1.200 €</p>
-<ul>
-<li>Todo lo de la Recomendada</li>
-<li>Páginas por zona: Alicante, San Juan y El Campello</li>
-<li>Puesta en marcha de anuncios en Google</li>
-<li><strong>3 meses de mantenimiento gratis</strong> (valor 75 €)</li>
-<li>3 rondas de cambios · Plazo: 3–4 semanas</li>
-</ul>
-</div>
-</div>
-<p class="small">Precios sin IVA. La opción 2 tiene precio de lanzamiento si la aceptas antes del 20 de diciembre de 2026. Mantenimiento: 25 € al mes con alojamiento, copias de seguridad, actualizaciones y pequeños cambios. En las opciones 2 y 3, los 3 primeros meses son gratis.</p>
+<section class="block" aria-labelledby="t-op">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="t-op">Tres opciones</h2>
+      <p class="muted">Todas parten de la maqueta que ya viste y mantienen vuestra dirección, sauper.es, para no perder lo que ya tenéis en Google.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3>Básica</h3>
+        <p class="for">Para tener ya una web que convenza.</p>
+        <p class="price">350 €</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Portada nueva con WhatsApp y llamada siempre a mano</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Ficha de Google completa y enlazada a la web</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Cambio a la web nueva sin perder Google</li>
+        </ul>
+        <p class="meta">2 rondas de cambios. Lista en 1 semana.</p>
+      </article>
+      <article class="plan star">
+        <span class="badge">La que te recomiendo</span>
+        <h3>Recomendada</h3>
+        <p class="for">Para que os encuentren cuando buscan jardinero.</p>
+        <p class="price">650 €<s>900 €</s></p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Todo lo de la Básica</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Una página para cada servicio, para salir en más búsquedas</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Antes y después de vuestros trabajos, y reseñas</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>3 o 4 imágenes 3D de jardines diseñados</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Sabréis cuántos os llaman o escriben desde la web</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9E265" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>3 meses de mantenimiento gratis</li>
+        </ul>
+        <p class="meta">2 rondas de cambios. Lista en 2 o 3 semanas. Precio de lanzamiento hasta el 20 de diciembre.</p>
+      </article>
+      <article class="plan">
+        <h3>Completa</h3>
+        <p class="for">Para crecer más rápido.</p>
+        <p class="price">1.200 €</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Todo lo de la Recomendada</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Páginas para Alicante, San Juan y El Campello</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>Puesta en marcha de anuncios en Google</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12603C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>3 meses de mantenimiento gratis</li>
+        </ul>
+        <p class="meta">3 rondas de cambios. Lista en 3 o 4 semanas.</p>
+      </article>
+    </div>
+    <p class="note">Precios sin IVA. El mantenimiento cuesta 25 € al mes e incluye alojamiento, copias de seguridad, actualizaciones y pequeños cambios. En la Recomendada y la Completa, los 3 primeros meses son gratis.</p>
+  </div>
+</section>
 
-<h2>Captar más: ficha de Google y anuncios</h2>
-<p><strong>Ficha de Google (gratis, incluida en las tres opciones).</strong> Ahora no tiene la web enlazada ni reseñas. La dejamos con fotos reales, horario y servicios, y te paso un mensaje para pedir reseña a tus mejores clientes.</p>
-<p><strong>Anuncios en Google (opcional).</strong> Salís arriba cuando alguien busca «jardinero en San Juan», y solo pagáis cuando hacen clic, con un tope mensual que fijáis vosotros. Con 200 € al mes de presupuesto:</p>
-<table>
-<tr><th>Precio por clic</th><th>Visitas al mes</th><th>Solicitudes al mes</th><th>Coste por solicitud</th></tr>
-<tr><td>1 €</td><td>200</td><td>16</td><td>12,50 €</td></tr>
-<tr><td>2 €</td><td>100</td><td>8</td><td>25 €</td></tr>
-<tr><td>4 €</td><td>50</td><td>4</td><td>50 €</td></tr>
-</table>
-<p class="small">En oficios y reformas el clic suele costar entre 0,60 y 5 €, y unas 8 de cada 100 visitas acaban en solicitud. Vuestro precio real se conoce tras unas dos semanas de campaña.</p>
-<p>Si cerráis 1 de cada 4 solicitudes, el escenario medio son 2 clientes nuevos al mes, y cada cliente de mantenimiento sigue pagando los meses siguientes. El presupuesto se paga directamente a Google; la gestión son 200 € al mes, sin permanencia. Mejor empezar cuando la web nueva esté publicada.</p>
+<section class="block" aria-labelledby="t-ads">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="t-ads">Que os encuentren más</h2>
+    </div>
+    <div class="ads">
+      <div class="free">
+        <h3>Ficha de Google</h3>
+        <p>Gratis e incluida en las tres opciones. Hoy no tiene la web enlazada ni reseñas. La dejamos con fotos reales, horario y servicios, y te paso un mensaje ya escrito para pedir reseña a tus clientes.</p>
+      </div>
+      <div class="calc">
+        <h3>Anuncios en Google, si queréis acelerar</h3>
+        <p class="muted" style="margin-top:8px">Salís arriba cuando alguien busca «jardinero en San Juan» y solo pagáis cuando hacen clic. Con un presupuesto de 200 € al mes:</p>
+        <p class="pick-label">Si cada clic cuesta…</p>
+        <div class="pick" role="group" aria-label="Precio por clic">
+          <button type="button" data-v="200" data-s="16" data-c="12,50 €" data-k="4" aria-pressed="false"><b>1 €</b></button>
+          <button type="button" data-v="100" data-s="8" data-c="25 €" data-k="2" aria-pressed="true"><b>2 €</b></button>
+          <button type="button" data-v="50" data-s="4" data-c="50 €" data-k="1" aria-pressed="false"><b>4 €</b></button>
+        </div>
+        <div class="flow" aria-live="polite">
+          <div><b id="a-v">100</b><span>visitas al mes</span></div>
+          <div><b id="a-s">8</b><span>personas piden presupuesto</span></div>
+          <div><b id="a-k">2</b><span>clientes nuevos</span></div>
+        </div>
+        <p class="small muted" id="a-c">Cada solicitud os cuesta unos 25 €. Calculado con 8 de cada 100 visitas pidiendo presupuesto y 1 de cada 4 contratando. El precio real del clic se conoce tras dos semanas de campaña. El presupuesto se paga a Google; la gestión son 200 € al mes, sin permanencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h2>Cómo lo haríamos</h2>
-<ol>
-<li><strong>Dominio y accesos (semana 1).</strong> Con el Kit Digital, el dominio tiene que estar a nombre de vuestra empresa. Pedimos a quien os hizo la web el código para trasladarlo y una copia de la web actual. Lo gestiono yo; tú solo lo autorizas.</li>
-<li><strong>Contenidos (semana 1).</strong> Fotos de vuestros trabajos, años de experiencia y jardines o comunidades que cuidáis.</li>
-<li><strong>Diseño (1 a 3 semanas).</strong> Partimos de la maqueta y te la enseño antes de publicar.</li>
-<li><strong>Publicación sin perder Google.</strong> Misma dirección, sauper.es, y las páginas antiguas redirigen a las nuevas.</li>
-<li><strong>Ficha de Google y reseñas</strong>, el mismo día.</li>
-<li><strong>Anuncios, si los queréis:</strong> dos semanas de datos y luego ajuste semanal.</li>
-</ol>
+<section class="block" aria-labelledby="t-pasos">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="t-pasos">Cómo lo haríamos</h2>
+    </div>
+    <ol class="steps">
+      <li><div><p class="when">Semana 1</p><h3>Dominio y accesos</h3><p class="muted">Con el Kit Digital, el dominio tiene que estar a nombre de SAUPER. Pido a quien os hizo la web el código para trasladarlo y una copia de la web actual. Tú solo lo autorizas.</p></div></li>
+      <li><div><p class="when">Semana 1</p><h3>Fotos y datos</h3><p class="muted">Las mejores fotos de antes y después (las de Instagram valen), años de experiencia y jardines que cuidáis.</p></div></li>
+      <li><div><p class="when">De 1 a 3 semanas, según la opción</p><h3>Diseño</h3><p class="muted">Partimos de la maqueta. Te la enseño antes de publicar.</p></div></li>
+      <li><div><p class="when">El día de la publicación</p><h3>Web nueva sin perder Google</h3><p class="muted">Misma dirección, sauper.es. Las páginas antiguas llevan a las nuevas, así Google no ve nada roto.</p></div></li>
+      <li><div><p class="when">El mismo día</p><h3>Ficha de Google y reseñas</h3><p class="muted">Web enlazada, fotos nuevas y mensaje para pedir reseñas.</p></div></li>
+      <li><div><p class="when">Si queréis anuncios</p><h3>Arranque de la campaña</h3><p class="muted">Dos semanas para tener datos reales y luego ajustes cada semana.</p></div></li>
+    </ol>
+  </div>
+</section>
 
-<h2>Qué necesito de vosotros</h2>
-<ul>
-<li>Autorización para pedir el dominio y los accesos</li>
-<li>Las mejores fotos de antes y después de vuestros trabajos (las de Instagram nos valen)</li>
-<li>Años de experiencia y número aproximado de jardines o comunidades</li>
-<li>Pedir una reseña en Google a 5 de vuestros clientes actuales (os paso el mensaje ya escrito)</li>
-</ul>
+<section class="block" style="padding-top:8px">
+  <div class="wrap two">
+    <div class="box">
+      <h3>Lo que necesito de vosotros</h3>
+      <ul>
+        <li>Autorización para pedir el dominio y los accesos</li>
+        <li>Las mejores fotos de antes y después</li>
+        <li>Años de experiencia y número aproximado de jardines o comunidades</li>
+        <li>Pedir una reseña en Google a 5 clientes actuales. Os paso el mensaje escrito.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Condiciones</h3>
+      <ul>
+        <li>50 % al aceptar y 50 % al publicar</li>
+        <li>Cambios fuera de las rondas incluidas, a 25 € la hora</li>
+        <li>Propuesta válida hasta el 20 de diciembre de 2026</li>
+        <li>Precios sin IVA</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<h2>Condiciones</h2>
-<ul>
-<li>50 % al aceptar y 50 % al publicar</li>
-<li>Los cambios que pasen de las rondas incluidas, a 25 € la hora</li>
-<li>Propuesta válida hasta el 20 de diciembre de 2026 · Precios sin IVA</li>
-</ul>
-<p><strong>¿Lo hablamos 15 minutos la semana que viene?</strong> Resolvemos dudas y eliges la opción que mejor os encaje. Respóndeme por WhatsApp y te llamo.</p>
-<p class="small">Fuentes: <a href="https://www.habitissimo.es/presupuestos/mantener-jardin">habitissimo</a> (precio de mantenimiento) · <a href="https://studiomeyer.io/es/growth/google-ads/rechner">StudioMeyer, con datos de LocaliQ 2026</a> (anuncios) · <a href="https://www.infoautonomos.com/?p=62067">Infoautónomos</a> (Kit Digital y dominio)</p>
+<section class="block" style="padding-top:8px">
+  <div class="wrap">
+    <div class="end">
+      <h2>¿Lo hablamos 15 minutos la semana que viene?</h2>
+      <p>Resolvemos dudas y eliges la opción que mejor os encaje. Respóndeme por WhatsApp y te llamo.</p>
+      <div class="row"><a class="btn btn-line" href="index.html">Ver la maqueta otra vez</a></div>
+    </div>
+  </div>
+</section>
 </main>
+
+<footer>
+  <div class="wrap">Datos de mercado: <a href="https://www.habitissimo.es/presupuestos/mantener-jardin">habitissimo</a> (precio de mantenimiento), <a href="https://studiomeyer.io/es/growth/google-ads/rechner">StudioMeyer con datos de LocaliQ 2026</a> (anuncios) e <a href="https://www.infoautonomos.com/?p=62067">Infoautónomos</a> (Kit Digital y dominio).</div>
+</footer>
+
+<script>
+(function(){
+  var months = document.querySelectorAll('#months li');
+  var result = document.getElementById('result');
+  function draw(price, time, keep){
+    for (var i = 0; i < months.length; i++){
+      var left = price - i * 200;
+      var part = Math.max(0, Math.min(200, left)) / 200;
+      months[i].querySelector('.fill').style.height = (part * 100) + '%';
+      months[i].classList.toggle('paid', part >= 0.5);
+    }
+    result.innerHTML = 'La web se paga en <strong>' + time + '</strong>. El primer año, ese cliente os deja <strong>' + keep + '</strong> después de pagarla.';
+  }
+  var yearBtns = document.querySelectorAll('.year .pick button');
+  for (var j = 0; j < yearBtns.length; j++){
+    yearBtns[j].addEventListener('click', function(){
+      for (var k = 0; k < yearBtns.length; k++){ yearBtns[k].setAttribute('aria-pressed', 'false'); }
+      this.setAttribute('aria-pressed', 'true');
+      draw(parseInt(this.getAttribute('data-price'), 10), this.getAttribute('data-time'), this.getAttribute('data-keep'));
+    });
+  }
+  draw(650, 'algo más de 3 meses', '1.750 €');
+
+  var adBtns = document.querySelectorAll('.calc .pick button');
+  for (var m = 0; m < adBtns.length; m++){
+    adBtns[m].addEventListener('click', function(){
+      for (var n = 0; n < adBtns.length; n++){ adBtns[n].setAttribute('aria-pressed', 'false'); }
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('a-v').textContent = this.getAttribute('data-v');
+      document.getElementById('a-s').textContent = this.getAttribute('data-s');
+      document.getElementById('a-k').textContent = this.getAttribute('data-k');
+      document.getElementById('a-c').textContent = 'Cada solicitud os cuesta unos ' + this.getAttribute('data-c') + '. Calculado con 8 de cada 100 visitas pidiendo presupuesto y 1 de cada 4 contratando. El precio real del clic se conoce tras dos semanas de campaña. El presupuesto se paga a Google; la gestión son 200 € al mes, sin permanencia.';
+    });
+  }
+})();
+</script>
 </body>
 </html>
