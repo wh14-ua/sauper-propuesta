@@ -44,7 +44,7 @@ p{margin:0}
 .slide img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05);transform:scale(1.02)}
 .slide.on img{animation:zoom 8s ease-out forwards}
 @keyframes zoom{from{transform:scale(1.02)}to{transform:scale(1.14)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,38,26,.6) 0%,rgba(8,38,26,0) 22%,rgba(8,38,26,.3) 38%,rgba(8,38,26,.85) 58%,rgba(8,38,26,.97) 100%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,38,26,.6) 0%,rgba(8,38,26,0) 20%,rgba(8,38,26,.5) 34%,rgba(8,38,26,.88) 55%,rgba(8,38,26,.97) 100%);pointer-events:none}
 .hero-in{position:relative;z-index:2;width:100%;max-width:1160px;margin:0 auto;padding:0 20px 30px;display:grid;gap:16px}
 .hero .zona{font-size:15px;font-weight:700;color:var(--lima);text-shadow:0 1px 10px rgba(0,0,0,.45)}
 .hero h1{font-size:clamp(52px,15vw,112px);color:var(--blanco);line-height:.95;letter-spacing:-0.03em}
