@@ -49,9 +49,9 @@ section.block{padding:40px 0}
 .year h2{color:var(--blanco)}
 .year .muted{color:#C3D3C8}
 .pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:22px 0}
-.pick button{font-family:inherit;font-size:14px;font-weight:600;min-height:56px;padding:8px 6px;border-radius:16px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:var(--blanco);cursor:pointer;display:grid;gap:2px;justify-items:center;line-height:1.2}
+.pick button{font-family:inherit;font-size:14px;font-weight:600;min-height:56px;padding:8px 2px;border-radius:16px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:var(--blanco);cursor:pointer;display:grid;gap:2px;justify-items:center;line-height:1.2}
 .pick button{align-content:center}
-.pick button span{font-size:13px}
+.pick button span{font-size:12px;letter-spacing:-.01em}
 .pick button b{font-size:16px;font-weight:800}
 .pick-label{font-size:14px;font-weight:700;margin:18px 0 -12px}
 .pick button[aria-pressed="true"]{background:var(--lima);border-color:var(--lima);color:var(--pino)}
@@ -126,6 +126,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--hoja)}
   .two{grid-template-columns:1fr 1fr}
   .end{padding:52px}
 }
+@media (max-width:400px){.year{padding:24px 14px}}
 @media (prefers-reduced-motion:reduce){.months li .fill{transition:none}}
 </style>
 </head>
